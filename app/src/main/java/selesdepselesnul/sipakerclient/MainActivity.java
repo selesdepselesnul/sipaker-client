@@ -1,5 +1,6 @@
 package selesdepselesnul.sipakerclient;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,9 +39,12 @@ public class MainActivity extends AppCompatActivity {
                         passwordEditText.getText().toString()
                 );
                 final Member expectedMember = members.get(actualMember.id);
-                if (actualMember.equals(expectedMember))
+                if (actualMember.equals(expectedMember)) {
                     Log.i(TAG_NAME, "Matched");
-                else
+                    Intent intent = new Intent(MainActivity.this, MemberRequest.class);
+                    intent.putExtra("id", actualMember.id);
+                    startActivity(intent);
+                } else
                     Log.i(TAG_NAME, "Isn't matched");
             }
         });
