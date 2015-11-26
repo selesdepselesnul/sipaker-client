@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SipakerClient</string>
     <string name="activity_login_text">login</string>
+    <string name="activity_request_button">pesan</string>
 </resources>
