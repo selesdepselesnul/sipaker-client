@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SipakerClient</string>
+    <string name="activity_login_text">login</string>
+</resources>
